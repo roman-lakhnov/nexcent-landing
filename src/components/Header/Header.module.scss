@@ -1,0 +1,80 @@
+@use '../../styles/variables' as *;
+@use '../../styles/typography' as *;
+@use '../../styles/mixins' as *;
+
+.header {
+	background-color: $color-silver;
+	padding: 22px 120px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	nav ul {
+		display: flex;
+		gap: 50px;
+		li a {
+			@include font(body, 2);
+			color: $color-nav;
+			transition: font-weight 0.3s ease;
+			&:hover {
+				text-decoration: underline;
+				font-weight: $font-medium;
+			}
+		}
+	}
+
+	.auth {
+		display: flex;
+		gap: 14px;
+		a {
+			@include font(body, 3, $font-medium);
+			padding: 10px 20px;
+			border-radius: 6px;
+			transition: font-weight 0.3s ease, background-color 0.3s ease,
+				color 0.3s ease;
+		}
+		:nth-child(1) {
+			color: $color-primary;
+			&:hover {
+				text-decoration: underline;
+				font-weight: $font-semibold;
+			}
+		}
+		:nth-child(2) {
+			color: $color-white;
+			background-color: $color-primary;
+			&:hover {
+				background-color: $color-shade-2;
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 16px 24px;
+		gap: 16px;
+
+		nav ul {
+			flex-wrap: wrap;
+			justify-content: space-around;
+			gap: 10px;
+			row-gap: 5px;
+			li{
+				flex: 1 1 30%;
+				text-align: center;
+			}
+		}
+
+		.auth {
+			align-items: stretch;
+			width: 100%;
+
+			a {
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+}

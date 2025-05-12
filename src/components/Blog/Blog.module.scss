@@ -1,0 +1,74 @@
+@use '../../styles/variables' as *;
+@use '../../styles/typography' as *;
+@use '../../styles/mixins' as *;
+
+.blog {
+	margin-top: 48px;
+	padding: 0 144px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	> p {
+		margin-top: 8px;
+		max-width: 628px;
+		text-align: center;
+	}
+	.list {
+		margin-top: 49px;
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+		justify-content: space-around;
+		.card {
+			width: 27%;
+			padding: 16px;
+			background-color: $color-silver;
+			border-radius: 8px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			box-shadow: 0px 8px 16px $color-card-shadow;
+			> P {
+				text-align: center;
+				@include font(header, 4, $font-semibold);
+				color: $color-grey;
+			}
+			.btn {
+				margin-top: 24px;
+				display: flex;
+				gap: 8px;
+				align-items: center;
+				a {
+					@include font(header, 4, $font-semibold);
+					color: $color-primary;
+					transition: all 0.3s ease;
+					&:hover {
+						text-decoration: underline;
+						font-weight: $font-semibold;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding: 0 24px;
+		> p {
+			text-align: left;
+		}
+		.list {
+			margin-top: 16px;
+			flex-direction: column;
+			align-items: center;
+			gap: 16px;
+			.card {
+				width: 100%;
+				> p {
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}

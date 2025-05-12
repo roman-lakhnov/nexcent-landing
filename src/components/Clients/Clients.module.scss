@@ -1,0 +1,46 @@
+@use '../../styles/variables' as *;
+@use '../../styles/typography' as *;
+@use '../../styles/mixins' as *;
+
+.clients {
+	margin-top: 40px;
+	padding: 0 144px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	h1 {
+		@include font(header, 2, $font-semibold);
+		color: $color-dark-grey;
+	}
+
+	p {
+		@include font(body, 2);
+		color: $color-grey;
+		margin-top: 8px;
+	}
+
+	.list {
+		padding: 25px 0;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	@media (max-width: 768px) {
+		padding: 0 24px;
+		margin-top: 20px;
+		p {
+			text-align: center;
+		}
+		.list {
+			justify-content: center;
+			padding: 20px;
+			gap: 15px;
+			img {
+				flex: 1 1 20%;
+				height: 60px;
+			}
+		}
+	}
+}

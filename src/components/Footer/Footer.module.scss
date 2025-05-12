@@ -1,0 +1,118 @@
+@use '../../styles/variables' as *;
+@use '../../styles/typography' as *;
+@use '../../styles/mixins' as *;
+
+.footer {
+	padding: 64px 165px;
+	background-color: $color-black;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	.info {
+		display: flex;
+		flex-direction: column;
+		@include font(body, 3);
+		color: rgba($color: $color-silver, $alpha: 0.8);
+		> :nth-child(2) {
+			margin-top: 40px;
+		}
+		> :nth-child(3) {
+			margin-top: 8px;
+		}
+
+		.mediaList {
+			margin-top: 40px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 16px;
+		}
+	}
+	.list {
+		display: flex;
+		flex-direction: row;
+		gap: 30px;
+
+		.col {
+			min-width: 160px;
+			h2 {
+				@include font(header, 4, $font-semibold);
+				color: $color-white;
+			}
+
+			ul {
+				margin-top: 24px;
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+			}
+			li {
+				@include font(body, 3);
+				color: $color-silver;
+				a {
+					color: rgba($color: $color-silver, $alpha: 0.8);
+					transition: all 0.3s ease;
+					&:hover {
+						text-decoration: underline;
+						font-weight: $font-semibold;
+					}
+				}
+			}
+			.inputBox {
+				margin-top: 24px;
+				background-color: rgba($color: $color-white, $alpha: 0.2);
+				border-radius: 8px;
+				padding: 10px 12px;
+				display: flex;
+				flex-direction: row;
+				input {
+					color: $color-silver;
+					&::placeholder {
+						color: #d9dbe1;
+					}
+				}
+			}
+		}
+	}
+	@media (max-width: 768px) {
+		padding: 32px 24px;
+		flex-direction: column;
+		gap: 32px;
+		.info {
+			width: 100%;
+			> img {
+				align-self: center;
+				width: 50%;
+			}
+			:nth-child(2) {
+				margin-top: 8px;
+				text-align: center;
+			}
+			:nth-child(3) {
+				text-align: center;
+			}
+			:nth-child(4) {
+				margin-top: 8px;
+				justify-content: space-evenly;
+			}
+		}
+		.mediaList {
+			justify-content: space-between;
+		}
+		.list {
+			flex-direction: column;
+			width: 100%;
+			.col {
+				text-align: center;
+				width: 100%;
+				.inputBox {
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+				}
+			}
+		}
+	}
+}

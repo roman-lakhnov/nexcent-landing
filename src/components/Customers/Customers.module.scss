@@ -1,0 +1,84 @@
+@use '../../styles/variables' as *;
+@use '../../styles/typography' as *;
+@use '../../styles/mixins' as *;
+
+.customers {
+	margin-top: 48px;
+	background-color: $color-silver;
+	padding: 33px 144px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	.content {
+		max-width: 748px;
+		> :nth-child(1) {
+			@include font(body, 2, $font-medium);
+			color: $color-grey;
+		}
+		> :nth-child(2) {
+			margin-top: 16px;
+			@include font(header, 4, $font-semibold);
+			color: $color-primary;
+		}
+		> :nth-child(3) {
+			margin-top: 8px;
+			@include font(body, 2);
+			color: $color-light-grey;
+		}
+		.flexBox {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 32px;
+			.list {
+				display: flex;
+				flex-direction: row;
+				gap: 41px;
+				align-items: center;
+				img {
+					width: 48px;
+					height: 48px;
+				}
+			}
+			.btn {
+				display: flex;
+				gap: 8px;
+				align-items: center;
+				a {
+					@include font(header, 4, $font-semibold);
+					color: $color-primary;
+					transition: all 0.3s ease;
+					&:hover {
+						text-decoration: underline;
+						font-weight: $font-semibold;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding: 32px 24px;
+		margin-top: 20px;
+		.content {
+			.flexBox {
+				margin-top: 15px;
+				gap: 10px;
+				flex-direction: column;
+				.list {
+					width: 100%;
+					flex-wrap: wrap;
+					justify-content: center;
+					padding: 20px;
+					gap: 15px;
+					img {
+						flex: 1 1 30%;
+					}
+				}
+			}
+		}
+	}
+}

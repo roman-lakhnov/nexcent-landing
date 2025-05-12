@@ -1,0 +1,63 @@
+@use '../../styles/variables' as *;
+@use '../../styles/typography' as *;
+@use '../../styles/mixins' as *;
+
+.community {
+	padding: 0 144px;
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	h1 {
+		@include font(header, 2, $font-semibold);
+		color: $color-dark-grey;
+		max-width: 542px;
+		text-align: center;
+	}
+
+	p {
+		margin-top: 8px;
+		@include font(body, 2);
+		color: $color-grey;
+	}
+
+	.contentList {
+		margin-top: 16px;
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-between;
+	}
+	.listItem {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border-radius: 8px;
+		padding: 32px 24px;
+		box-shadow: 0px 2px 4px rgba($color-shade-5, 0.1);
+		h2 {
+			@include font(header, 3, $font-semibold);
+			color: $color-dark-grey;
+			margin-top: 16px;
+			text-align: center;
+			max-width: 230px;
+		}
+
+		p {
+			margin-top: 8px;
+			@include font(body, 3);
+			color: $color-grey;
+			text-align: center;
+			max-width: 251px;
+		}
+	}
+	@media (max-width: 768px) {
+		padding: 0 24px;
+		margin-top: 20px;
+		.contentList{
+			flex-direction: column;
+			align-items: center;
+			gap: 20px;
+		}
+	}
+}
