@@ -12,7 +12,7 @@ implementation of a Figma template into a responsive web layout using:
 
 - Modular SCSS styling
 - Component-based architecture
-- Media for responcive bechavior
+- Media for responsive behavior
 - Variable-based styling
 
 The landing page responsive elements adapt to both pc and mobile
