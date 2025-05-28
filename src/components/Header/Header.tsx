@@ -1,9 +1,11 @@
 import styles from './Header.module.scss'
+import LogoImage from '/src/assets/images/Logo.svg'
+
 const Header = () => {
 	return (
 		<header className={styles.header}>
 			<div className={styles.logo}>
-				<img src='/src/assets/images/Logo.svg' alt='Nexcent' />
+				<img src={LogoImage} alt='Nexcent' />
 			</div>
 			<nav>
 				<ul className={styles.navList}>

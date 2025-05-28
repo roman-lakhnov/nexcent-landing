@@ -3,6 +3,8 @@
 A landing page for Nexcent service built with React, TypeScript,
 and modular SCSS.
 
+This page preview is available on [GitHub Pages](https://roman-lakhnov.github.io/nexcent-landing/)
+
 ## About
 
 This project was created as part of a SCSS study. It demonstrates the
@@ -11,7 +13,7 @@ implementation of a Figma template into a responsive web layout using:
 - Modular SCSS styling
 - Component-based architecture
 - Media for responcive bechavior
-- Variable-based theming
+- Variable-based styling
 
 The landing page responsive elements adapt to both pc and mobile
 screen sizes while maintaining visual integrity and usability.
@@ -43,6 +45,4 @@ npm run dev
 
 ## Credits
 
-Thanks to the Figma template creator:
-
-[Figma Template](https://www.figma.com/community/file/1222060007934600841)
+Thanks to the [Figma template creator:](https://www.figma.com/community/file/1222060007934600841)

@@ -1,4 +1,12 @@
 import styles from './Customers.module.scss'
+import Logo8 from '/src/assets/images/Logo (8).svg'
+import Logo9 from '/src/assets/images/Logo (9).svg'
+import Logo10 from '/src/assets/images/Logo (10).svg'
+import Logo11 from '/src/assets/images/Logo (11).svg'
+import Logo12 from '/src/assets/images/Logo (12).svg'
+import Logo13 from '/src/assets/images/Logo (13).svg'
+import ArrowRight from '/src/assets/images/Right.svg'
+
 const Customers = () => {
 	return (
 		<section className={styles.customers}>
@@ -19,16 +27,16 @@ const Customers = () => {
 				<p>British Dragon Boat Racing Association</p>
 				<div className={styles.flexBox}>
 					<div className={styles.list}>
-						<img src='/src/assets/images/Logo (8).svg' alt='logo8' />
-						<img src='/src/assets/images/Logo (9).svg' alt='logo9' />
-						<img src='/src/assets/images/Logo (10).svg' alt='logo10' />
-						<img src='/src/assets/images/Logo (11).svg' alt='logo11' />
-						<img src='/src/assets/images/Logo (12).svg' alt='logo12' />
-						<img src='/src/assets/images/Logo (13).svg' alt='logo13' />
+						<img src={Logo8} alt='logo8' />
+						<img src={Logo9} alt='logo9' />
+						<img src={Logo10} alt='logo10' />
+						<img src={Logo11} alt='logo11' />
+						<img src={Logo12} alt='logo12' />
+						<img src={Logo13} alt='logo13' />
 					</div>
 					<div className={styles.btn}>
 						<a href='#'>Meet all customers</a>
-						<img src='/src/assets/images/Right.svg' alt='arrow' />
+						<img src={ArrowRight} alt='arrow' />
 					</div>
 				</div>
 			</div>

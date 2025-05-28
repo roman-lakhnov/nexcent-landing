@@ -1,8 +1,10 @@
 import styles from './Unlock.module.scss'
+import RafikiImage from '/src/assets/images/rafiki.svg'
+
 const Unlock = () => {
 	return (
 		<section className={styles.unlock}>
-			<img src='/src/assets/images/rafiki.svg' alt='mobileApp' />
+			<img src={RafikiImage} alt='mobileApp' />
 			<div className={styles.content}>
 				<h1>The unseen of spending three years at Pixelgrade</h1>
 				<p>

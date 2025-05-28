@@ -1,8 +1,10 @@
 import styles from './Calendar.module.scss'
+import PanaImage from '/src/assets/images/pana.svg'
+
 const Calendar = () => {
 	return (
 		<section className={styles.calendar}>
-			<img src='/src/assets/images/pana.svg' alt='loginImage' />
+			<img src={PanaImage} alt='loginImage' />
 			<div className={styles.content}>
 				<div className={styles.wrapper}>
 					<h1>How to design your site footer like we did</h1>

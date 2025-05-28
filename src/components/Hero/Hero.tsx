@@ -1,4 +1,7 @@
 import styles from './Hero.module.scss'
+import IllustrationImage from '/src/assets/images/Illustration.svg'
+import DotImage from '/src/assets/images/Dot.svg'
+
 const Hero = () => {
 	return (
 		<section className={styles.hero}>
@@ -11,16 +14,8 @@ const Hero = () => {
 				</p>
 				<a href='#'>Register</a>
 			</div>
-			<img
-				src='/src/assets/images/Illustration.svg'
-				alt='Illustration'
-				loading='lazy'
-			/>
-			<img
-				className={styles.dots}
-				src='/src/assets/images/Dot.svg'
-				alt='dots'
-			/>
+			<img src={IllustrationImage} alt='Illustration' loading='lazy' />
+			<img className={styles.dots} src={DotImage} alt='dots' />
 		</section>
 	)
 }

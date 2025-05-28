@@ -1,16 +1,23 @@
 import styles from './Footer.module.scss'
+import FooterLogo from '/src/assets/images/footer-Logo.svg'
+import SocialIcon1 from '/src/assets/images/Social Icons1.svg'
+import SocialIcon2 from '/src/assets/images/Social Icons2.svg'
+import SocialIcon3 from '/src/assets/images/Social Icons3.svg'
+import SocialIcon4 from '/src/assets/images/Social Icons4.svg'
+import SendIcon from '/src/assets/images/send.svg'
+
 const Footer = () => {
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.info}>
-				<img src='/src/assets/images/footer-Logo.svg' alt='logo' />
+				<img src={FooterLogo} alt='logo' />
 				<p>Copyright © 2020 Nexcent ltd.</p>
 				<p>All rights reserved</p>
 				<div className={styles.mediaList}>
-					<img src='/src/assets/images/Social Icons1.svg' alt='instagram' />
-					<img src='/src/assets/images/Social Icons2.svg' alt='web' />
-					<img src='/src/assets/images/Social Icons3.svg' alt='x' />
-					<img src='/src/assets/images/Social Icons4.svg' alt='youtube' />
+					<img src={SocialIcon1} alt='instagram' />
+					<img src={SocialIcon2} alt='web' />
+					<img src={SocialIcon3} alt='x' />
+					<img src={SocialIcon4} alt='youtube' />
 				</div>
 			</div>
 			<div className={styles.list}>
@@ -37,7 +44,7 @@ const Footer = () => {
 				<div className={styles.col}>
 					<h2>Support</h2>
 					<ul>
-					<li>
+						<li>
 							<a href='#'>Help center</a>
 						</li>
 						<li>
@@ -57,8 +64,8 @@ const Footer = () => {
 				<div className={styles.col}>
 					<h2>Stay up to date</h2>
 					<div className={styles.inputBox}>
-						<input type="text" placeholder='Your email address'/>
-						<img src="/src/assets/images/send.svg" alt="send" />
+						<input type='text' placeholder='Your email address' />
+						<img src={SendIcon} alt='send' />
 					</div>
 				</div>
 			</div>

@@ -1,4 +1,6 @@
 import styles from './Blog.module.scss'
+import ArrowRight from '/src/assets/images/Right.svg'
+
 const Blog = () => {
 	return (
 		<section className={styles.blog}>
@@ -13,7 +15,7 @@ const Blog = () => {
 					<p>Creating Streamlined Safeguarding Processes with OneRen</p>
 					<div className={styles.btn}>
 						<a href='#'>Readmore</a>
-						<img src='/src/assets/images/Right.svg' alt='arrow' />
+						<img src={ArrowRight} alt='arrow' />
 					</div>
 				</div>
 				<div className={styles.card}>
@@ -23,14 +25,14 @@ const Blog = () => {
 					</p>
 					<div className={styles.btn}>
 						<a href='#'>Readmore</a>
-						<img src='/src/assets/images/Right.svg' alt='arrow' />
+						<img src={ArrowRight} alt='arrow' />
 					</div>
 				</div>
 				<div className={styles.card}>
 					<p>Revamping the Membership Model with Triathlon Australia</p>
 					<div className={styles.btn}>
 						<a href='#'>Readmore</a>
-						<img src='/src/assets/images/Right.svg' alt='arrow' />
+						<img src={ArrowRight} alt='arrow' />
 					</div>
 				</div>
 			</div>
